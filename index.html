@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <title>Angular Blog Setup</title>
+  <link href="main.css" type="text/css" rel="stylesheet">
+</head>
+<body ng-app="blogApp">
+
+  <h1 ng-controller="title">{{insertTitle.title}}</h1>
+
+  <div class="blogPosts" ng-controller="BlogPosts">
+    <div class="posts" ng-repeat = 'post in posts'>
+      <h2>{{post.title}}</h2>
+      <img src={{post.image}}>
+      <p>{{post.exc}}</p>
+      <a class="ReadMore" ng-controller"thisFullPost">READ MORE</a>
+      <p>{{post.author}}</p>
+      <p>{{post.createdOn}}</p>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
