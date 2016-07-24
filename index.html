@@ -13,12 +13,15 @@
       <h2>{{post.title}}</h2>
       <img src={{post.image}}>
       <p>{{post.exc}}</p>
-      <a class="ReadMore" ng-controller"thisFullPost">READ MORE</a>
+      <a class="ReadMore" ng-click="showDetails = ! showDetails">READ MORE</a>
+      <div ng-show="showDetails">
+        {{post.body}}
+      </div>
+
       <p>{{post.author}}</p>
       <p>{{post.createdOn}}</p>
     </div>
   </div>
-
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   <script src="app.js"></script>
